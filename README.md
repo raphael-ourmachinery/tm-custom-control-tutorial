@@ -1,2 +1,2 @@
-# tm-custom-control-tutorial
-Repository for "Creating a custom control" tutorial's source code
+# themachinery_raymarching
+Simple raymarching component for The Machinery
