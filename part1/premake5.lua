@@ -19,7 +19,7 @@ workspace "ui-custom-controls"
     filter "platforms:Win64"
         targetdir "%TM_SDK_DIR%/bin/plugins"
     filter {"platforms:Linux"}
-        targetdir "${TM_SDK_DIR}/bin/plugins"
+        targetdir "${TM_SDK_DIR}/bin/Debug/plugins"
     filter {}
 
 filter "system:windows"
@@ -70,7 +70,7 @@ filter "platforms:Win64"
 
 filter {"platforms:Linux"}
     defines { "TM_OS_LINUX", "TM_OS_POSIX" }
-    includedirs { "${TM_SDK_DIR}/headers" }
+    includedirs { "${TM_SDK_DIR}" }
     architecture "x64"
     toolset "clang"
     buildoptions {

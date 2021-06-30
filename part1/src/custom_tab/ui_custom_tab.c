@@ -45,8 +45,10 @@ static void tab__ui(tm_tab_o *data, tm_ui_o *ui, const struct tm_ui_style_t *uis
     tm_ui_api->label(ui, uistyle, &(tm_ui_label_t){ .rect = rect, .text = "UI Custom Controls" });
     rect.y += metrics_item_h;
     tm_ui_circular_button_t button = {
-        .center = (tm_vec2_t){ content_r.w / 2.f, rect.y + 15.f},
-        .radius = 20.f,
+        .text = "click me",
+        .text_color = (tm_color_srgb_t){ .r = 255, .g = 255, .b = 255, .a = 255 },
+        .center = (tm_vec2_t){ content_r.w / 2.f, rect.y + 85.f},
+        .radius = 40.f,
         .background_color = (tm_color_srgb_t){ .r = 128, .g = 200, .b = 50, .a = 255 },
         .hover_color = (tm_color_srgb_t){ .r = 128, .g = 100, .b = 50, .a = 255 },
         .clicked_color = (tm_color_srgb_t){ .r = 128, .g = 100, .b = 150, .a = 255 }
@@ -97,6 +99,7 @@ static tm_tab_i *tab__create(tm_tab_create_context_t *context, tm_ui_o *ui)
         .max_x = 0.f,
         .max_y = 0.f,
     };
+    *id += 100000;
 
     return &tab->tm_tab_i;
 }

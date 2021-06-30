@@ -7,7 +7,8 @@
 struct tm_ui_o;
 struct tm_ui_style_t;
 
-typedef struct tm_ui_circular_button_data_t {
+typedef struct tm_ui_circular_button_data_t 
+{
     const char *name;
     uint32_t frames_active;
 } tm_ui_circular_button_data_t;
@@ -24,7 +25,7 @@ typedef struct tm_ui_circular_button_t
 
     uint32_t icon;
     const char *text;
-    const struct tm_color_srgb_t *text_color;
+    const struct tm_color_srgb_t text_color;
 } tm_ui_circular_button_t;
 
 struct tm_ui_custom_controls_api
